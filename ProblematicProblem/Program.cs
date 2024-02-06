@@ -168,7 +168,7 @@ namespace ProblematicProblem
                         userInput = Console.ReadLine().ToLower();
                         if (userInput == "keep")
                         {
-                            terminate = true;
+                            Environment.Exit(0);
                         }
                         else if (userInput == "redo")
                         {
@@ -178,7 +178,7 @@ namespace ProblematicProblem
                         {
                             Console.WriteLine("Invalid response, please try again.");
                         }
-                    } while (userInput != "keep" && userInput != "redo");
+                    } while (terminate == false);
                 } while (terminate = false);
             }
         }
